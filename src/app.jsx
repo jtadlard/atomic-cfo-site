@@ -291,7 +291,7 @@ export default function App() {
       }}>
         <div style={{ maxWidth: "1060px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
-            <Logo size={34} />
+            <img src="/logo.png" alt="Atomic CFO" style={{ height: "34px" }} />
             <span style={{ fontFamily: "'Lora', serif", fontSize: "20px", fontWeight: 700, color: C.navy, letterSpacing: "-0.01em" }}>
               Atomic <span style={{ fontWeight: 400 }}>CFO</span>
             </span>
@@ -754,13 +754,13 @@ export default function App() {
               display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "36px",
             }}>
               <div style={{
-                width: "90px", height: "90px", borderRadius: "50%",
-                background: C.navy, display: "flex", alignItems: "center", justifyContent: "center", marginBottom: "18px",
+                width: "200px", height: "200px", borderRadius: "50%", overflow: "hidden",
+                border: "4px solid " + C.gold, boxShadow: "0 8px 24px rgba(27,42,74,0.12)", marginBottom: "18px",
               }}>
-                <Logo size={40} />
+                <img src="/headshot.jpg" alt="JT Adlard" style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }} />
               </div>
-              <div style={{ fontSize: "17px", fontWeight: 600, color: C.navy, marginBottom: "3px" }}>The Founder</div>
-              <div style={{ fontSize: "13px", color: C.textLight }}>Atomic CFO</div>
+              <div style={{ fontSize: "17px", fontWeight: 600, color: C.navy, marginBottom: "3px" }}>JT Adlard</div>
+              <div style={{ fontSize: "13px", color: C.textLight }}>Founder, Atomic CFO</div>
               <div style={{ display: "flex", gap: "8px", marginTop: "18px" }}>
                 {["LinkedIn", "Twitter"].map((s, i) => (
                   <a key={i} href="#" style={{
@@ -790,7 +790,7 @@ export default function App() {
               </div>
 
               <div style={{ display: "flex", gap: "7px", marginTop: "22px", flexWrap: "wrap" }}>
-                {["Investment Analysis", "Capital Allocation", "Financial Modeling", "AI Implementation", "Automation", "SMB Strategy"].map((tag, i) => (
+                {["CFA Charterholder", "Investment Analysis", "Capital Allocation", "Financial Modeling", "AI Implementation", "Automation", "SMB Strategy"].map((tag, i) => (
                   <span key={i} style={{
                     padding: "4px 11px", borderRadius: "100px", fontSize: "12px", fontWeight: 500,
                     background: C.white, color: C.textMid, border: `1px solid ${C.borderLight}`,
@@ -810,7 +810,7 @@ export default function App() {
       }}>
         <div style={{ maxWidth: "580px", margin: "0 auto" }}>
           <Reveal>
-            <Logo size={44} />
+            <img src="/logo.png" alt="Atomic CFO" style={{ height: "44px" }} />
             <h2 style={{
               fontFamily: "'Lora', serif", fontSize: "clamp(28px, 4vw, 44px)",
               fontWeight: 600, color: C.navy, lineHeight: 1.15, marginBottom: "16px", marginTop: "16px",
@@ -833,7 +833,7 @@ export default function App() {
           <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "36px", marginBottom: "36px" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
-                <Logo size={24} />
+                <img src="/logo.png" alt="Atomic CFO" style={{ height: "24px" }} />
                 <span style={{ fontFamily: "'Lora', serif", fontSize: "18px", fontWeight: 700, color: C.navy }}>
                   Atomic <span style={{ fontWeight: 400 }}>CFO</span>
                 </span>
