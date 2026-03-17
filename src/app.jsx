@@ -8,26 +8,28 @@ function useInView(threshold = 0.12) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setVisible(true); }, { threshold });
+    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setVisible(true); obs.disconnect(); } }, { threshold, rootMargin: "0px 0px 80px 0px" });
     obs.observe(el);
-    return () => obs.disconnect();
+    // Safety fallback: if the observer never fires, show content after 2.5s
+    const fallback = setTimeout(() => setVisible(true), 2500);
+    return () => { obs.disconnect(); clearTimeout(fallback); };
   }, [threshold]);
   return [ref, visible];
 }
 
 const Reveal = ({ children, delay = 0 }) => {
-  const [ref, visible] = useInView(0.08);
+  const [ref, visible] = useInView(0.02);
   return (
     <div ref={ref} style={{
       opacity: visible ? 1 : 0,
-      transform: visible ? "translateY(0)" : "translateY(24px)",
-      transition: `opacity 0.6s cubic-bezier(.22,1,.36,1) ${delay}s, transform 0.6s cubic-bezier(.22,1,.36,1) ${delay}s`,
+      transform: visible ? "translateY(0)" : "translateY(18px)",
+      transition: `opacity 0.5s cubic-bezier(.22,1,.36,1) ${delay}s, transform 0.5s cubic-bezier(.22,1,.36,1) ${delay}s`,
     }}>{children}</div>
   );
 };
 
 const Ticker = ({ end, suffix = "" }) => {
-  const [ref, visible] = useInView(0.3);
+  const [ref, visible] = useInView(0.05);
   const [val, setVal] = useState(0);
   useEffect(() => {
     if (!visible) return;
@@ -256,7 +258,7 @@ export default function App() {
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-        html{scroll-behavior:smooth} body{background:${C.bg}}
+        html{scroll-behavior:smooth;overflow-x:hidden} body{background:${C.bg};font-family:'Source Sans 3',sans-serif;color:${C.text};overflow-x:hidden}
         ::selection{background:${C.gold};color:#fff}
         a{color:inherit}
         .nl{font-size:14px;font-weight:500;color:${C.textMid};text-decoration:none;transition:color 0.2s;cursor:pointer;background:none;border:none;font-family:inherit}
@@ -292,9 +294,6 @@ export default function App() {
         <div style={{ maxWidth: "1060px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
             <img src="/logo.png" alt="Atomic CFO" style={{ height: "34px" }} />
-            <span style={{ fontFamily: "'Lora', serif", fontSize: "20px", fontWeight: 700, color: C.navy, letterSpacing: "-0.01em" }}>
-              Atomic <span style={{ fontWeight: 400 }}>CFO</span>
-            </span>
           </a>
 
           <div className="desk-nav" style={{ display: "flex", alignItems: "center", gap: "28px" }}>
@@ -328,6 +327,7 @@ export default function App() {
       <section style={{
         position: "relative", minHeight: "100vh", display: "flex", alignItems: "center",
         padding: "120px 24px 80px", background: C.white, borderBottom: `1px solid ${C.borderLight}`,
+        overflow: "hidden",
       }}>
         <div style={{
           position: "absolute", top: 0, right: 0, width: "45%", height: "100%",
