@@ -834,9 +834,6 @@ export default function App() {
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "10px" }}>
                 <img src="/logo.png" alt="Atomic CFO" style={{ height: "24px" }} />
-                <span style={{ fontFamily: "'Lora', serif", fontSize: "18px", fontWeight: 700, color: C.navy }}>
-                  Atomic <span style={{ fontWeight: 400 }}>CFO</span>
-                </span>
               </div>
               <p style={{ fontSize: "14px", lineHeight: 1.7, color: C.textLight, maxWidth: "240px" }}>
                 Fractional CFO, AI advisory, and data systems for growing businesses. Based in Kansas City.
