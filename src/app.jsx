@@ -763,7 +763,7 @@ export default function App() {
               <div style={{ fontSize: "13px", color: C.textLight }}>Founder, Atomic CFO</div>
               <div style={{ display: "flex", gap: "8px", marginTop: "18px" }}>
                 {["LinkedIn", "Twitter"].map((s, i) => (
-                  <a key={i} href="#" style={{
+                  <a key={i} href="https://www.linkedin.com/in/jtadlard/" style={{
                     padding: "5px 12px", borderRadius: "6px", fontSize: "12px", fontWeight: 500,
                     background: C.white, color: C.textMid, textDecoration: "none", border: `1px solid ${C.border}`,
                   }}>{s}</a>
