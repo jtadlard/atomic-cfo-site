@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const CALENDLY_URL = "#book";
+const CALENDLY_URL = "https://calendly.com/jt-adlard/30min";
 
 function useInView(threshold = 0.12) {
   const ref = useRef(null);
