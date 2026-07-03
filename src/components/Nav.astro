@@ -12,18 +12,7 @@ const path = Astro.url.pathname;
 <header class="nav" id="site-nav">
   <div class="container nav__inner">
     <a href="/" class="nav__brand" aria-label="Atomic CFO home">
-      <svg width="30" height="30" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <rect x="3" y="28" width="3" height="3" fill="#C8963E" opacity="0.5"/>
-        <rect x="7" y="25" width="3" height="3" fill="#C8963E" opacity="0.6"/>
-        <rect x="11" y="27" width="2.5" height="2.5" fill="#C8963E" opacity="0.7"/>
-        <rect x="10" y="22" width="4" height="12" rx="0.5" fill="#1B2A4A"/>
-        <rect x="16" y="18" width="4" height="16" rx="0.5" fill="#1B2A4A"/>
-        <rect x="22" y="14" width="4" height="20" rx="0.5" fill="#1B2A4A"/>
-        <rect x="28" y="8" width="4" height="26" rx="0.5" fill="#1B2A4A"/>
-        <path d="M8 26L30 6" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round"/>
-        <path d="M24 5L31 5.5L30.5 12.5" stroke="#1B2A4A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span class="nav__wordmark">ATOMIC CFO</span>
+      <img src="/logo.png" alt="Atomic CFO" class="nav__logo" />
     </a>
 
     <nav class="nav__links" aria-label="Primary">
@@ -66,15 +55,7 @@ const path = Astro.url.pathname;
     gap: 10px;
     text-decoration: none;
   }
-  .nav__wordmark {
-    font-family: var(--sans);
-    font-weight: 700;
-    font-size: 0.9375rem;
-    letter-spacing: 0.16em;
-    color: var(--navy);
-    border-bottom: 2px solid var(--gold);
-    padding-bottom: 2px;
-  }
+  .nav__logo { height: 34px; width: auto; }
   .nav__links {
     display: flex;
     align-items: center;

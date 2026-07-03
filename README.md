@@ -5,7 +5,7 @@ Three static pages, fully pre-rendered HTML (SEO/AEO ready):
 | Page | URL | Job |
 |---|---|---|
 | Home | `/` | Decision-quality positioning, services, about. No AI or productized-offer mentions. |
-| Construction | `/construction/` | Industry landing page: job costing, WIP, bonding. FAQ schema included. |
+| Construction | `/construction/` | Industry landing page: job costing, WIP, cash flow between draws. FAQ schema included. |
 | AI | `/ai/` | "AI as a tool, not a strategy" — linked quietly from nav and footer; not promoted in homepage content. |
 
 ## Run locally
