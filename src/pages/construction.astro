@@ -1,0 +1,385 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const CALENDLY = 'https://calendly.com/jt-adlard/30min';
+
+const faqs = [
+  {
+    q: 'Do you replace my CPA?',
+    a: 'No. Your CPA handles taxes and compliance, and I work alongside them. I handle the forward-looking side: job costing, cash flow forecasting, WIP schedules, and the decisions in between tax seasons. Most CPAs are glad someone is finally doing it.',
+  },
+  {
+    q: 'Do you work inside QuickBooks?',
+    a: 'Yes. Most of my contractor clients run QuickBooks Online. I build job costing with Projects and Classes, clean up the chart of accounts so labor and job costs land in COGS where they belong, and set up the reporting on top of it. If you run a construction-specific ERP, I work with that too.',
+  },
+  {
+    q: 'What size contractors do you work with?',
+    a: 'Generally $1M to $30M in revenue. Big enough that job-level visibility genuinely matters, small enough that a full-time CFO is not yet justified.',
+  },
+  {
+    q: 'Are you only in Kansas City?',
+    a: 'I am based in the Kansas City metro and meet local clients in person, but the work itself is remote-friendly. I work with contractors anywhere in the US.',
+  },
+  {
+    q: 'How does this help my bonding capacity?',
+    a: 'Sureties extend capacity based on working capital, equity, and the quality of your financial reporting, especially your WIP schedule. Cleaner books, a credible WIP, and stronger working capital management directly support a larger bonding line. That is often the single highest-ROI outcome of this work.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+---
+
+<Base
+  title="Fractional CFO for Contractors | Job Costing, WIP & Bonding | Atomic CFO"
+  description="Fractional CFO for general contractors and trades doing $1M–$30M. Job costing that shows margin by job, WIP schedules your surety trusts, and cash flow forecasting between draws. Kansas City based."
+  schema={faqSchema}
+>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Built for builders</p>
+      <h1>Know which jobs make money. Before the job ends.</h1>
+      <p class="lede hero__lede">
+        Most contractors find out a job lost money at closeout, when there's
+        nothing left to do about it. I build the job costing, WIP schedules,
+        and cash flow forecasting that show you margin while you can still act
+        on it. And that your surety will actually trust.
+      </p>
+      <div class="hero__actions">
+        <a href={CALENDLY} class="btn btn--gold">Book a free call →</a>
+        <a href="#work" class="btn btn--ghost">What I build</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE PROBLEMS ═══ -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="reveal">
+        <p class="eyebrow">What I find inside contractors' books</p>
+        <h2>The margin you see usually isn't the margin you have.</h2>
+        <p class="lede" style="margin-top:18px; max-width:600px;">
+          These are the patterns I see again and again in GC and trades books.
+          Every one of them distorts the picture you're making decisions from.
+        </p>
+      </div>
+      <div class="prob-grid">
+        {[
+          {
+            t: 'Phantom margin',
+            d: 'Field labor sitting in overhead instead of job costs. Gross margin looks great on paper because the biggest cost of doing the work never hits the jobs.',
+          },
+          {
+            t: 'Fuel, equipment, and small tools in the wrong bucket',
+            d: 'Job-site costs scattered through operating expenses. Each one is small. Together they quietly move real points of margin off your jobs.',
+          },
+          {
+            t: 'Labor paid outside payroll, tagged to nobody',
+            d: 'Checks and transfers to crews coded to the company instead of the job. You can’t price the next job right if you don’t know what labor cost on the last one.',
+          },
+          {
+            t: 'Billing that lags the work',
+            d: 'Billable costs piling up unbilled, draws out of sync with progress, and retainage you stopped tracking. Underbilling is you financing the owner’s project.',
+          },
+          {
+            t: 'A WIP schedule built once a year, for the bank',
+            d: 'If the WIP only exists at statement time, it isn’t a management tool. It’s a compliance document, and your surety can tell.',
+          },
+          {
+            t: 'Cash crunches between draws',
+            d: 'Payroll is weekly. Draws are monthly, and pay-when-paid makes them slower. Without a forecast, the squeeze always feels like a surprise.',
+          },
+        ].map((p) => (
+          <div class="card reveal">
+            <h3 class="prob__t">{p.t}</h3>
+            <p class="prob__d">{p.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WIP TABLE: signature visual ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="max-width:620px;">
+        <p class="eyebrow">The document that runs the relationship</p>
+        <h2>Your surety reads your WIP schedule like I used to read 10-Ks.</h2>
+        <p class="lede" style="margin-top:18px;">
+          Bonding capacity is built on three things: working capital, equity,
+          and whether your numbers can be believed. The WIP schedule is where
+          all three show up. A credible monthly WIP, tied to clean job costing,
+          is the fastest path to a bigger bonding line.
+        </p>
+      </div>
+
+      <figure class="wip reveal" aria-label="Example work-in-progress schedule">
+        <figcaption class="wip__caption">
+          Work-in-progress schedule · illustrative
+        </figcaption>
+        <div class="wip__scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Job</th>
+                <th scope="col">Contract</th>
+                <th scope="col">Est. cost</th>
+                <th scope="col">% complete</th>
+                <th scope="col">Earned revenue</th>
+                <th scope="col">Billed to date</th>
+                <th scope="col">Over / (under) billed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Riverside Clinic TI</td>
+                <td>$1,840,000</td>
+                <td>$1,508,000</td>
+                <td>62%</td>
+                <td>$1,140,800</td>
+                <td>$1,196,000</td>
+                <td class="wip__pos">$55,200</td>
+              </tr>
+              <tr class="wip__flag">
+                <td>Maple St. Warehouse</td>
+                <td>$3,120,000</td>
+                <td>$2,714,000</td>
+                <td>48%</td>
+                <td>$1,497,600</td>
+                <td>$1,092,000</td>
+                <td class="wip__neg">($405,600)</td>
+              </tr>
+              <tr>
+                <td>Eastgate Retail Pad</td>
+                <td>$960,000</td>
+                <td>$782,000</td>
+                <td>91%</td>
+                <td>$873,600</td>
+                <td>$902,400</td>
+                <td class="wip__pos">$28,800</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="wip__note">
+          That middle row is the one that matters. $405K of work performed and
+          not yet billed is $405K of someone else's project financed on your
+          working capital. It suppresses the working capital your surety
+          measures, and it usually goes unnoticed until the year-end statement.
+          A monthly WIP catches it in week two.
+        </p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ═══ WHAT I BUILD ═══ -->
+  <section class="section section--navy" id="work">
+    <div class="container">
+      <div class="reveal" style="max-width:600px;">
+        <p class="eyebrow">The work</p>
+        <h2>What I actually build for contractors.</h2>
+      </div>
+      <div class="build-grid">
+        {[
+          {
+            t: 'Job costing that holds up',
+            d: 'Cost code structure, Projects and Classes in QuickBooks, and labor allocated to jobs. Margin by job, visible monthly, not discovered at closeout.',
+          },
+          {
+            t: 'Labor where it belongs',
+            d: 'Field labor moved out of overhead and into job costs, including crews paid outside payroll. Your gross margin becomes a real number.',
+          },
+          {
+            t: 'A monthly WIP schedule',
+            d: 'Percentage of completion, over/under billings, and estimated cost to complete. Built as a management tool first, surety document second.',
+          },
+          {
+            t: 'Cash flow forecasting',
+            d: '13-week cash visibility across draws, retainage, payroll, and supplier terms. The squeeze stops being a surprise.',
+          },
+          {
+            t: 'Billing and draw hygiene',
+            d: 'Unbilled charges cleared, draws synced to progress, retainage tracked to release. Cash comes in when the work goes out.',
+          },
+          {
+            t: 'Bonding capacity support',
+            d: 'Working capital structure, statement quality, and the WIP your surety wants to see. The financial case for a bigger line.',
+          },
+        ].map((b) => (
+          <div class="build reveal">
+            <h3 class="build__t">{b.t}</h3>
+            <p class="build__d">{b.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="section section--cream">
+    <div class="container faq">
+      <div class="reveal">
+        <p class="eyebrow">Common questions</p>
+        <h2>Asked by every contractor I talk to.</h2>
+      </div>
+      <div class="faq__list">
+        {faqs.map((f) => (
+          <details class="faq__item reveal">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    heading="Let's look at your jobs together."
+    body="Book a free 30-minute call. Bring a recent P&L and your gut feeling about which jobs are winners. I'll tell you what I'd look at first. No pitch."
+  />
+</Base>
+
+<style>
+  .hero {
+    padding: 110px 0 90px;
+    background: linear-gradient(180deg, #fff 0%, var(--offwhite) 100%);
+    border-bottom: 1px solid var(--warm-gray-light);
+  }
+  .hero h1 { max-width: 19ch; }
+  .hero__lede { margin-top: 26px; max-width: 60ch; }
+  .hero__actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+
+  .prob-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 44px;
+  }
+  .prob__t { font-size: 1.1875rem; margin-bottom: 10px; }
+  .prob__d { font-size: var(--text-small); line-height: 1.7; color: var(--slate); }
+
+  /* WIP table */
+  .wip {
+    margin-top: 52px;
+    background: #fff;
+    border: 1px solid var(--warm-gray-light);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  .wip__caption {
+    padding: 14px 26px;
+    background: var(--navy);
+    color: var(--pale-gold);
+    font-size: var(--text-caption);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .wip__scroll { overflow-x: auto; }
+  .wip table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--text-small);
+    min-width: 760px;
+  }
+  .wip th {
+    text-align: left;
+    padding: 13px 18px;
+    font-family: var(--sans);
+    font-size: var(--text-caption);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--slate);
+    border-bottom: 2px solid var(--warm-gray);
+    white-space: nowrap;
+  }
+  .wip td {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--warm-gray-light);
+    color: var(--charcoal);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .wip td:first-child { font-weight: 600; color: var(--navy); }
+  .wip__flag { background: var(--pale-gold); }
+  .wip__pos { color: var(--green); font-weight: 600; }
+  .wip__neg { color: #9B2C2C; font-weight: 700; }
+  .wip__note {
+    padding: 22px 26px;
+    font-size: var(--text-small);
+    line-height: 1.75;
+    color: var(--slate);
+    background: var(--offwhite);
+    max-width: none;
+  }
+
+  .build-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 48px;
+  }
+  .build {
+    padding: 30px 28px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .build__t { color: #fff; font-size: 1.1875rem; margin-bottom: 10px; }
+  .build__d { font-size: var(--text-small); line-height: 1.7; }
+
+  .faq__list { margin-top: 40px; max-width: 760px; }
+  .faq__item {
+    border-bottom: 1px solid var(--warm-gray-light);
+  }
+  .faq__item summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 22px 36px 22px 0;
+    font-family: var(--serif);
+    font-size: 1.1875rem;
+    font-weight: 600;
+    color: var(--navy);
+    position: relative;
+  }
+  .faq__item summary::-webkit-details-marker { display: none; }
+  .faq__item summary::after {
+    content: '+';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--sans);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--gold);
+    transition: transform 0.2s ease;
+  }
+  .faq__item[open] summary::after { content: '−'; }
+  .faq__item p {
+    padding: 0 0 24px;
+    color: var(--slate);
+    font-size: var(--text-body);
+    line-height: 1.75;
+  }
+
+  @media (max-width: 920px) {
+    .prob-grid { grid-template-columns: 1fr 1fr; }
+    .build-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .prob-grid { grid-template-columns: 1fr; }
+    .hero { padding: 72px 0 64px; }
+  }
+</style>
