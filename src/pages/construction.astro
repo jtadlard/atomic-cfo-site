@@ -18,12 +18,8 @@ const faqs = [
     a: 'Generally $1M to $30M in revenue. Big enough that job-level visibility genuinely matters, small enough that a full-time CFO is not yet justified.',
   },
   {
-    q: 'Are you only in Kansas City?',
-    a: 'I am based in the Kansas City metro and meet local clients in person, but the work itself is remote-friendly. I work with contractors anywhere in the US.',
-  },
-  {
-    q: 'How does this help my bonding capacity?',
-    a: 'Sureties extend capacity based on working capital, equity, and the quality of your financial reporting, especially your WIP schedule. Cleaner books, a credible WIP, and stronger working capital management directly support a larger bonding line. That is often the single highest-ROI outcome of this work.',
+    q: 'How do we start?',
+    a: 'With a short call and a look at your books. I will tell you what I see, what I would fix first, and what working together would look like. If it is not a fit, you will know that quickly too.',
   },
 ];
 
@@ -39,8 +35,8 @@ const faqSchema = {
 ---
 
 <Base
-  title="Fractional CFO for Contractors | Job Costing, WIP & Bonding | Atomic CFO"
-  description="Fractional CFO for general contractors and trades doing $1M–$30M. Job costing that shows margin by job, WIP schedules your surety trusts, and cash flow forecasting between draws. Kansas City based."
+  title="Fractional CFO for Contractors | Job Costing & WIP Visibility | Atomic CFO"
+  description="Fractional CFO for general contractors and trades doing $1M–$30M. Job costing that shows margin by job, monthly WIP schedules, and cash flow forecasting between draws."
   schema={faqSchema}
 >
   <!-- ═══ HERO ═══ -->
@@ -52,7 +48,7 @@ const faqSchema = {
         Most contractors find out a job lost money at closeout, when there's
         nothing left to do about it. I build the job costing, WIP schedules,
         and cash flow forecasting that show you margin while you can still act
-        on it. And that your surety will actually trust.
+        on it.
       </p>
       <div class="hero__actions">
         <a href={CALENDLY} class="btn btn--gold">Book a free call →</a>
@@ -92,7 +88,7 @@ const faqSchema = {
           },
           {
             t: 'A WIP schedule built once a year, for the bank',
-            d: 'If the WIP only exists at statement time, it isn’t a management tool. It’s a compliance document, and your surety can tell.',
+            d: 'If the WIP only exists at statement time, it isn’t a management tool. It’s a compliance document, and it isn’t helping you run the jobs.',
           },
           {
             t: 'Cash crunches between draws',
@@ -112,13 +108,13 @@ const faqSchema = {
   <section class="section">
     <div class="container">
       <div class="reveal" style="max-width:620px;">
-        <p class="eyebrow">The document that runs the relationship</p>
-        <h2>Your surety reads your WIP schedule like I used to read 10-Ks.</h2>
+        <p class="eyebrow">One report, run monthly</p>
+        <h2>The WIP schedule is where the truth shows up.</h2>
         <p class="lede" style="margin-top:18px;">
-          Bonding capacity is built on three things: working capital, equity,
-          and whether your numbers can be believed. The WIP schedule is where
-          all three show up. A credible monthly WIP, tied to clean job costing,
-          is the fastest path to a bigger bonding line.
+          Percentage of completion, earned revenue, and over or under billings,
+          job by job. Built monthly and tied to clean job costing, it shows you
+          where margin is drifting and where cash is stuck while there is still
+          time to act.
         </p>
       </div>
 
@@ -173,8 +169,8 @@ const faqSchema = {
         <p class="wip__note">
           That middle row is the one that matters. $405K of work performed and
           not yet billed is $405K of someone else's project financed on your
-          working capital. It suppresses the working capital your surety
-          measures, and it usually goes unnoticed until the year-end statement.
+          working capital. It ties up cash you could be running the
+          business with, and it usually goes unnoticed until the year-end statement.
           A monthly WIP catches it in week two.
         </p>
       </figure>
@@ -200,7 +196,7 @@ const faqSchema = {
           },
           {
             t: 'A monthly WIP schedule',
-            d: 'Percentage of completion, over/under billings, and estimated cost to complete. Built as a management tool first, surety document second.',
+            d: 'Percentage of completion, over/under billings, and estimated cost to complete. Built as a management tool you actually use, not a year-end formality.',
           },
           {
             t: 'Cash flow forecasting',
@@ -211,8 +207,8 @@ const faqSchema = {
             d: 'Unbilled charges cleared, draws synced to progress, retainage tracked to release. Cash comes in when the work goes out.',
           },
           {
-            t: 'Bonding capacity support',
-            d: 'Working capital structure, statement quality, and the WIP your surety wants to see. The financial case for a bigger line.',
+            t: 'Clean monthly reporting',
+            d: 'A month-end process that produces statements you can hand to a bank, a partner, or a buyer without apologizing.',
           },
         ].map((b) => (
           <div class="build reveal">
