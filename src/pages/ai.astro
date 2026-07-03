@@ -1,0 +1,279 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const CALENDLY = 'https://calendly.com/jt-adlard/30min';
+---
+
+<Base
+  title="AI for Small Business, Without the Hype | Atomic CFO"
+  description="AI is a tool, not a strategy. A practical guide to where AI genuinely helps a $1M–$30M business: automating repetitive finance work, meeting notes, reporting drafts. Honest about what it can't do. No vendor commissions."
+>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">The honest take</p>
+      <h1>AI won't run your business. It can help you run it better.</h1>
+      <p class="lede hero__lede">
+        Most owners I talk to are stuck between hype and paralysis. One camp
+        says AI changes everything; the other says it's a toy. Both are wrong
+        in the same way: they treat AI as a strategy. It's a tool. A genuinely
+        useful one, in the right hands, pointed at the right work.
+      </p>
+      <div class="hero__actions">
+        <a href={CALENDLY} class="btn btn--gold">Talk through your situation →</a>
+        <a href="#fit" class="btn btn--ghost">Where it actually fits</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ THE FRAME ═══ -->
+  <section class="section section--cream">
+    <div class="container frame">
+      <div class="reveal">
+        <p class="eyebrow">How to think about it</p>
+        <h2>You don't need an AI strategy. You need a few good tools attached to real work.</h2>
+      </div>
+      <div class="frame__body reveal">
+        <p>
+          When spreadsheets arrived, smart businesses didn't write a
+          "spreadsheet strategy." They found the three places where a
+          spreadsheet beat a ledger book, used it there, and got on with
+          running the business. AI deserves the same treatment.
+        </p>
+        <p>
+          The owners getting real value from AI right now aren't doing anything
+          exotic. They've identified the repetitive, language-heavy work in
+          their business, the summarizing, drafting, categorizing, and
+          first-pass analysis, and handed it off. The hours come back. Judgment
+          stays with the humans.
+        </p>
+        <p>
+          That's the whole philosophy. Find the work AI is genuinely good at,
+          attach it to a workflow your team already runs, keep a person
+          accountable for the output, and measure whether it actually saved
+          time. If it didn't, drop it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GOOD AT / NOT GOOD AT ═══ -->
+  <section class="section" id="fit">
+    <div class="container">
+      <div class="reveal" style="max-width:600px;">
+        <p class="eyebrow">A clear-eyed inventory</p>
+        <h2>What it's good at. What it isn't.</h2>
+      </div>
+      <div class="cols">
+        <div class="col col--good reveal">
+          <div class="col__head">Genuinely good at</div>
+          <ul>
+            <li><strong>First drafts.</strong> Emails, proposals, job descriptions, meeting agendas. You edit instead of staring at a blank page.</li>
+            <li><strong>Summarizing.</strong> Meeting recordings into notes and action items. Long documents into the three things that matter.</li>
+            <li><strong>Categorizing and sorting.</strong> Transactions, support requests, leads. High-volume, low-stakes sorting that eats staff hours.</li>
+            <li><strong>First-pass analysis.</strong> "What changed in this month's P&L versus last?" A solid starting point for a human to verify.</li>
+            <li><strong>Repetitive reporting.</strong> The monthly package that takes someone two days, drafted in minutes and reviewed by a person.</li>
+          </ul>
+        </div>
+        <div class="col col--bad reveal">
+          <div class="col__head">Not good at</div>
+          <ul>
+            <li><strong>Judgment calls.</strong> Whether to fire the client, raise the price, or take the loan. It can inform the call. It can't make it.</li>
+            <li><strong>Being accountable.</strong> AI is confidently wrong some of the time. Every output that matters needs a named human owner.</li>
+            <li><strong>Knowing your business.</strong> It doesn't know your customer history, your crew's quirks, or what your banker said last month, unless you build that in deliberately.</li>
+            <li><strong>Unsupervised accuracy.</strong> Numbers that flow to clients, lenders, or the IRS need verification. Always.</li>
+            <li><strong>Replacing thinking.</strong> If a task required judgment before AI, it still requires judgment. The tool changes the speed, not the responsibility.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHERE IT FITS IN FINANCE ═══ -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="reveal" style="max-width:620px;">
+        <p class="eyebrow">In practice</p>
+        <h2>Where this shows up in the finance work I do.</h2>
+        <p class="lede" style="margin-top:16px;">
+          I use these tools daily in my own practice, which is how I know what
+          holds up and what's a demo trick. A few examples from real workflows:
+        </p>
+      </div>
+      <div class="ex-grid">
+        {[
+          {
+            t: 'Meetings into action',
+            d: 'Client and vendor calls transcribed and summarized, with decisions and owners pulled out automatically. Nothing falls through.',
+          },
+          {
+            t: 'Monthly reporting drafts',
+            d: 'The narrative part of the monthly package, what changed and why, drafted from the numbers and reviewed by a human before it goes anywhere.',
+          },
+          {
+            t: 'Transaction review',
+            d: 'First-pass categorization of bank feeds with the exceptions flagged for a person. The bookkeeper reviews instead of keying.',
+          },
+          {
+            t: 'Document heavy-lifting',
+            d: 'Contracts, loan agreements, and vendor proposals summarized against what matters: terms, rates, obligations, deadlines.',
+          },
+        ].map((e) => (
+          <div class="ex reveal">
+            <h3 class="ex__t">{e.t}</h3>
+            <p class="ex__d">{e.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ HOW I HELP ═══ -->
+  <section class="section section--cream">
+    <div class="container how">
+      <div class="reveal">
+        <p class="eyebrow">How I help</p>
+        <h2>Practical adoption, not a transformation project.</h2>
+      </div>
+      <div class="how__steps">
+        {[
+          {
+            t: 'Start with your workflows, not the tools',
+            d: 'We map where your team’s hours actually go and find the two or three places where AI clearly earns its keep. Most businesses need fewer tools than they think.',
+          },
+          {
+            t: 'Pick tools without the hype',
+            d: 'I evaluate options against your specific work, not a vendor’s demo. I take no commissions and have no partnerships. If the honest answer is "you don’t need this yet," that’s the answer you get.',
+          },
+          {
+            t: 'Build it, train your team, measure it',
+            d: 'Set up the workflow, train the people who’ll run it, and put a number on the time saved. If it doesn’t pay for itself, we kill it and move on.',
+          },
+        ].map((s, i) => (
+          <div class="how__step reveal">
+            <div class="how__marker">{i + 1}</div>
+            <div>
+              <h3 class="how__t">{s.t}</h3>
+              <p class="how__d">{s.d}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    heading="Wondering where AI fits in your business?"
+    body="Book a free 30-minute call. Tell me how your team spends its week, and I'll tell you honestly where AI would help, where it wouldn't, and what I'd try first. No hype, no vendor pitch."
+    primaryLabel="Book a free call"
+  />
+</Base>
+
+<style>
+  .hero {
+    padding: 110px 0 90px;
+    background: linear-gradient(180deg, #fff 0%, var(--offwhite) 100%);
+    border-bottom: 1px solid var(--warm-gray-light);
+  }
+  .hero h1 { max-width: 20ch; }
+  .hero__lede { margin-top: 26px; max-width: 62ch; }
+  .hero__actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 34px; }
+
+  .frame {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .frame__body { display: flex; flex-direction: column; gap: 18px; }
+
+  .cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 44px;
+  }
+  .col {
+    background: #fff;
+    border: 1px solid var(--warm-gray-light);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .col__head {
+    padding: 15px 28px;
+    font-size: var(--text-caption);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  .col--good .col__head { background: var(--green); }
+  .col--bad .col__head { background: var(--slate); }
+  .col ul { list-style: none; padding: 10px 28px 22px; }
+  .col li {
+    padding: 14px 0;
+    border-bottom: 1px solid var(--warm-gray-light);
+    font-size: var(--text-small);
+    line-height: 1.7;
+    color: var(--slate);
+  }
+  .col li:last-child { border-bottom: none; }
+  .col li strong { color: var(--navy); font-weight: 700; display: block; margin-bottom: 2px; font-size: var(--text-body); }
+
+  .ex-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 48px;
+  }
+  .ex {
+    padding: 30px 28px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .ex__t { color: #fff; font-size: 1.1875rem; margin-bottom: 10px; }
+  .ex__d { font-size: var(--text-small); line-height: 1.7; }
+
+  .how__steps {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 780px;
+  }
+  .how__step {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--warm-gray);
+  }
+  .how__step:last-child { border-bottom: none; }
+  .how__marker {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--pale-gold);
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .how__t { margin-bottom: 8px; }
+  .how__d { color: var(--slate); }
+
+  @media (max-width: 920px) {
+    .frame { grid-template-columns: 1fr; gap: 32px; }
+    .cols { grid-template-columns: 1fr; }
+    .ex-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    .hero { padding: 72px 0 64px; }
+    .how__step { grid-template-columns: 1fr; gap: 10px; }
+  }
+</style>
