@@ -1,0 +1,37 @@
+---
+interface Props {
+  heading: string;
+  body: string;
+  primaryLabel?: string;
+}
+const { heading, body, primaryLabel = 'Book a free call' } = Astro.props;
+const CALENDLY = 'https://calendly.com/jt-adlard/30min';
+---
+
+<section class="cta-band">
+  <div class="container cta-band__inner reveal">
+    <h2>{heading}</h2>
+    <p class="lede">{body}</p>
+    <div class="cta-band__actions">
+      <a href={CALENDLY} class="btn btn--gold">{primaryLabel} →</a>
+      <a href="mailto:jt@atomiccfo.com" class="btn btn--ghost">Or email JT directly</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cta-band {
+    background: linear-gradient(180deg, var(--pale-gold) 0%, var(--offwhite) 100%);
+    border-top: 1px solid var(--warm-gray-light);
+    padding: 96px 0;
+    text-align: center;
+  }
+  .cta-band__inner { max-width: 640px; }
+  .cta-band__inner p { margin: 18px auto 30px; }
+  .cta-band__actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
