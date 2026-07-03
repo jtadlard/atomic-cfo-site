@@ -1,0 +1,478 @@
+---
+import Base from '../layouts/Base.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const CALENDLY = 'https://calendly.com/jt-adlard/30min';
+---
+
+<Base
+  title="Atomic CFO | Fractional CFO & Decision Systems for $1M–$30M Businesses"
+  description="Better decisions start with better numbers. Fractional CFO services, financial diagnostics, and decision systems for owner-led businesses doing $1M to $30M. Led by a CFA with 12 years in institutional equity research."
+>
+  <!-- ═══ HERO ═══ -->
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Fractional CFO for Owner-Led Businesses</p>
+      <h1>
+        The quality of your decisions is capped by the quality of your numbers.
+      </h1>
+      <p class="lede hero__lede">
+        Most owners aren't short on effort or instinct. They're short on clear,
+        timely, trustworthy financial information. I spent 12 years analyzing
+        public companies as an institutional equity researcher. Now I bring that
+        discipline to businesses doing $1M to $30M, so the big calls get made
+        on evidence instead of gut feel.
+      </p>
+      <div class="hero__actions">
+        <a href={CALENDLY} class="btn btn--gold">Book a free call →</a>
+        <a href="#services" class="btn btn--ghost">How I work</a>
+      </div>
+      <ul class="hero__creds" aria-label="Credentials">
+        <li>CFA Charterholder</li>
+        <li>12 years institutional equity research</li>
+        <li>Master's in Accountancy</li>
+        <li>Working with owners nationwide</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ WHERE DECISIONS GO WRONG ═══ -->
+  <section class="section section--cream">
+    <div class="container">
+      <div class="reveal">
+        <p class="eyebrow">Sound familiar?</p>
+        <h2>Why good decisions are harder than they should be.</h2>
+        <p class="lede" style="margin-top:18px; max-width:580px;">
+          Every business I work with is run by a capable owner making hard
+          calls with soft information. The patterns repeat:
+        </p>
+      </div>
+      <div class="pain-grid">
+        {[
+          {
+            q: 'Pricing by feel.',
+            a: 'Bids and prices set on habit and competitor guesses, because nobody knows true cost by job, client, or service line.',
+          },
+          {
+            q: 'Cash flow surprises.',
+            a: 'The bank balance tells you about problems after they happen. A forecast tells you six weeks before.',
+          },
+          {
+            q: 'Growth that hides the truth.',
+            a: 'Revenue is up, everyone is busy, and you genuinely cannot tell whether you are making more money or just doing more work.',
+          },
+          {
+            q: 'A tax accountant, but no thinking partner.',
+            a: 'Your CPA keeps you compliant. Nobody is helping you decide what to do next, and the books were not built to answer that question.',
+          },
+        ].map((p) => (
+          <div class="card reveal">
+            <h3 class="pain__q">“{p.q}”</h3>
+            <p class="pain__a">{p.a}</p>
+          </div>
+        ))}
+      </div>
+      <p class="reveal" style="margin-top:40px; font-size:var(--text-body); color:var(--slate);">
+        None of these are character flaws. They're information problems, and
+        information problems are fixable. Usually not with a big overhaul, but
+        with a handful of small, precise changes in the right places. That's
+        what atomic means.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══ APPROACH ═══ -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="reveal" style="text-align:center; max-width:620px; margin:0 auto;">
+        <p class="eyebrow">The Atomic approach</p>
+        <h2>Small, precise moves. Compounding results.</h2>
+        <p class="lede" style="margin:18px auto 0;">
+          Lasting improvement doesn't come from a reorg. It comes from fixing
+          the fundamentals in the right order.
+        </p>
+      </div>
+      <div class="steps">
+        {[
+          {
+            n: 'First',
+            t: 'Get clear.',
+            d: 'Clean, trustworthy numbers. Cash flow, margins, and the handful of metrics that actually drive your business, in plain English.',
+          },
+          {
+            n: 'Then',
+            t: 'Get strategic.',
+            d: 'Pricing, hiring, capital, expansion. The big calls, made with evidence and a thinking partner who has analyzed hundreds of businesses.',
+          },
+          {
+            n: 'Finally',
+            t: 'Get systematic.',
+            d: 'Dashboards, forecasts, and workflows that keep the clarity running without your constant attention.',
+          },
+        ].map((s) => (
+          <div class="step reveal">
+            <div class="step__n">{s.n}</div>
+            <h3 class="step__t">{s.t}</h3>
+            <p class="step__d">{s.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ═══ -->
+  <section class="section section--cream" id="services">
+    <div class="container">
+      <div class="reveal">
+        <p class="eyebrow">Services</p>
+        <h2>How I work with owners.</h2>
+        <p class="lede" style="margin-top:16px; max-width:560px;">
+          Everything starts with numbers you can trust. From there, it's
+          strategy and the systems that keep the clarity running.
+        </p>
+      </div>
+      <div class="svc-grid">
+        {[
+          {
+            title: 'Fractional CFO',
+            subtitle: 'Strategic finance, without the full-time hire.',
+            items: [
+              'Financial strategy and planning',
+              'Pricing and profitability analysis',
+              'Capital allocation and budgeting',
+              'Board, bank, and investor reporting',
+              'Acquisition and deal analysis',
+              'A thinking partner for the big calls',
+            ],
+          },
+          {
+            title: 'Financial Visibility',
+            subtitle: 'Numbers you can actually run the business on.',
+            items: [
+              'Clean, reconciled books to build on',
+              'Job costing and unit economics',
+              'Margin by job, client, or service line',
+              'Financial dashboards and scorecards',
+              'KPI frameworks that fit your business',
+              'Monthly reporting in plain English',
+            ],
+          },
+          {
+            title: 'Cash Flow & Forecasting',
+            subtitle: 'See the squeeze before it arrives.',
+            items: [
+              '13-week cash flow forecasting',
+              'Scenario planning for the big decisions',
+              'Working capital management',
+              'Budgeting that ties to strategy',
+              'Debt and banking relationship support',
+              'Integrated financial models',
+            ],
+          },
+        ].map((svc) => (
+          <div class="card reveal svc">
+            <h3>{svc.title}</h3>
+            <p class="svc__sub">{svc.subtitle}</p>
+            <ul class="svc__list">
+              {svc.items.map((item) => <li>{item}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ WHO IT'S FOR ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto;">
+        <p class="eyebrow">Who this is for</p>
+        <h2>Businesses doing <span class="gold-text">$1M to $30M</span>.</h2>
+        <p class="lede" style="margin:16px auto 0;">
+          Big enough to need real financial thinking. Small enough that a
+          full-time CFO doesn't make sense yet.
+        </p>
+      </div>
+      <div class="who-grid">
+        <a href="/construction/" class="who who--featured reveal">
+          <div class="who__label">Contractors & Trades</div>
+          <p class="who__d">
+            Job costing, WIP schedules, and cash flow between draws. My deepest specialty
+            has its own page.
+          </p>
+          <span class="who__link">Built for builders →</span>
+        </a>
+        {[
+          { label: 'Real estate operators', d: 'Project-level cash flow and consolidated visibility.' },
+          { label: 'Service businesses', d: 'Utilization, pricing, and margin by client.' },
+          { label: 'Founder-led companies', d: 'A thinking partner for the owner who carries it all.' },
+        ].map((t) => (
+          <div class="who reveal">
+            <div class="who__label">{t.label}</div>
+            <p class="who__d">{t.d}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section section--cream" id="about">
+    <div class="container about">
+      <div class="about__photo reveal">
+        <img src="/headshot.jpg" alt="JT Adlard, founder of Atomic CFO" width="280" height="280" loading="lazy" />
+        <div class="about__name">JT Adlard, CFA</div>
+        <div class="about__role">Founder, Atomic CFO · Kansas City</div>
+        <div class="about__links">
+          <a href="https://www.linkedin.com/in/jtadlard/" rel="noopener">LinkedIn</a>
+          <a href="mailto:jt@atomiccfo.com">Email</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">About</p>
+        <h2>I analyzed companies for a living. Now I help run them.</h2>
+        <div class="about__body">
+          <p>
+            For 12 years I worked in institutional equity research, picking
+            apart balance sheets, studying capital allocation, and figuring out
+            which businesses were genuinely well run and which ones just looked
+            that way from the outside.
+          </p>
+          <p>
+            The pattern was consistent. The companies that compounded were the
+            ones that understood their own numbers and had systems to act on
+            them. Not smarter people. Better information, used with discipline.
+          </p>
+          <p>
+            Atomic CFO brings that same standard to owner-led businesses. I
+            don't hand you a spreadsheet and leave. I build the job costing,
+            the dashboards, the forecasts, and the workflows, and I sit with
+            you on the decisions that matter.
+          </p>
+          <p class="about__pull">
+            Big transformations start with atomic-level changes in the right places.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand
+    heading="Ready to see your business clearly?"
+    body="Book a free 30-minute call. We'll look at where you are, where you want to go, and which small changes will make the biggest difference. No pitch. Just a conversation."
+  />
+</Base>
+
+<style>
+  /* Hero */
+  .hero {
+    padding: 110px 0 90px;
+    background: linear-gradient(180deg, #fff 0%, var(--offwhite) 100%);
+    border-bottom: 1px solid var(--warm-gray-light);
+  }
+  .hero h1 { max-width: 24ch; }
+  .hero__lede { margin-top: 26px; max-width: 60ch; }
+  .hero__actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 34px;
+  }
+  .hero__creds {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin-top: 44px;
+    padding-top: 26px;
+    border-top: 1px solid var(--warm-gray-light);
+    list-style: none;
+  }
+  .hero__creds li {
+    font-size: var(--text-small);
+    font-weight: 600;
+    color: var(--slate);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .hero__creds li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* Pains */
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 44px;
+  }
+  .pain__q {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  .pain__a { font-size: var(--text-small); line-height: 1.7; color: var(--slate); }
+
+  /* Steps */
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 56px;
+  }
+  .step {
+    padding: 36px 30px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .step__n {
+    font-size: var(--text-caption);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+  }
+  .step__t { color: #fff; margin-bottom: 10px; }
+  .step__d { font-size: var(--text-small); line-height: 1.7; }
+
+  /* Services */
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 44px;
+  }
+  .svc { display: flex; flex-direction: column; }
+  .svc__sub {
+    font-size: var(--text-small);
+    font-weight: 600;
+    color: var(--gold-dark);
+    margin: 6px 0 20px;
+  }
+  .svc__list { list-style: none; flex: 1; }
+  .svc__list li {
+    font-size: var(--text-small);
+    color: var(--slate);
+    padding: 7px 0 7px 18px;
+    position: relative;
+    line-height: 1.55;
+  }
+  .svc__list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+
+  /* Who */
+  .gold-text { color: var(--gold-dark); }
+  .who-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 44px;
+  }
+  .who {
+    padding: 28px 24px;
+    border-radius: var(--radius);
+    background: #fff;
+    border: 1px solid var(--warm-gray-light);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .who--featured {
+    background: var(--navy);
+    border-color: var(--navy);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .who--featured:hover { transform: translateY(-3px); box-shadow: var(--shadow-lift); }
+  .who__label {
+    font-family: var(--serif);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .who--featured .who__label { color: #fff; }
+  .who__d { font-size: var(--text-small); line-height: 1.6; color: var(--slate); flex: 1; }
+  .who--featured .who__d { color: rgba(255, 255, 255, 0.7); }
+  .who__link {
+    margin-top: 16px;
+    font-size: var(--text-small);
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  /* About */
+  .about {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .about__photo {
+    text-align: center;
+    padding: 36px 28px;
+    background: #fff;
+    border: 1px solid var(--warm-gray-light);
+    border-radius: var(--radius);
+  }
+  .about__photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 4px solid var(--gold);
+    margin: 0 auto 18px;
+  }
+  .about__name { font-family: var(--serif); font-weight: 600; font-size: 1.125rem; color: var(--navy); }
+  .about__role { font-size: var(--text-small); color: var(--slate-light); margin-top: 2px; }
+  .about__links { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+  .about__links a {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: var(--text-caption);
+    font-weight: 600;
+    border: 1px solid var(--warm-gray);
+    text-decoration: none;
+    color: var(--slate);
+  }
+  .about__links a:hover { border-color: var(--navy); color: var(--navy); }
+  .about__body { margin-top: 22px; display: flex; flex-direction: column; gap: 16px; }
+  .about__pull {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 1.1875rem;
+    border-left: 3px solid var(--gold);
+    padding-left: 18px;
+  }
+
+  @media (max-width: 920px) {
+    .steps { grid-template-columns: 1fr; }
+    .svc-grid { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr 1fr; }
+    .about { grid-template-columns: 1fr; gap: 40px; }
+    .about__photo { max-width: 360px; margin: 0 auto; }
+  }
+  @media (max-width: 560px) {
+    .pain-grid { grid-template-columns: 1fr; }
+    .who-grid { grid-template-columns: 1fr; }
+    .hero { padding: 72px 0 64px; }
+  }
+</style>

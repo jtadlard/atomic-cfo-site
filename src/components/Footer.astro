@@ -1,0 +1,93 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container footer__grid">
+    <div>
+      <span class="footer__wordmark">ATOMIC CFO</span>
+      <p class="footer__blurb">
+        Fractional CFO and decision systems for owner-led businesses doing
+        $1M to $30M. Working with owners nationwide.
+      </p>
+    </div>
+    <nav aria-label="Footer · Pages">
+      <div class="footer__head">Pages</div>
+      <a href="/#services">Services</a>
+      <a href="/construction/">For Contractors</a>
+      <a href="/ai/">Working with AI</a>
+      <a href="/#about">About</a>
+    </nav>
+    <nav aria-label="Footer · Connect">
+      <div class="footer__head">Connect</div>
+      <a href="https://www.linkedin.com/in/jtadlard/" rel="noopener">LinkedIn</a>
+      <a href="mailto:jt@atomiccfo.com">jt@atomiccfo.com</a>
+      <a href="https://calendly.com/jt-adlard/30min" rel="noopener">Book a call</a>
+    </nav>
+  </div>
+  <div class="container footer__legal">
+    <span>© {year} Atomic CFO. All rights reserved.</span>
+    <span>Atomic CFO | atomiccfo.com</span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--navy);
+    color: rgba(255, 255, 255, 0.75);
+    padding: 64px 0 28px;
+  }
+  .footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .footer__wordmark {
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: 0.9375rem;
+    letter-spacing: 0.16em;
+    color: #fff;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 3px;
+    display: inline-block;
+  }
+  .footer__blurb {
+    margin-top: 16px;
+    font-size: var(--text-small);
+    line-height: 1.7;
+    max-width: 300px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  .footer__head {
+    font-size: var(--text-caption);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--pale-gold);
+    margin-bottom: 14px;
+  }
+  .footer nav a {
+    display: block;
+    font-size: var(--text-small);
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.2s;
+  }
+  .footer nav a:hover { color: #fff; }
+  .footer__legal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 24px;
+    font-size: var(--text-caption);
+    color: rgba(255, 255, 255, 0.45);
+  }
+  @media (max-width: 720px) {
+    .footer__grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+</style>
