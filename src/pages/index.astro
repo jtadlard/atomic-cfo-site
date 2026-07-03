@@ -7,12 +7,12 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
 
 <Base
   title="Atomic CFO | Fractional CFO & Decision Systems for $1M–$30M Businesses"
-  description="Better decisions start with better numbers. Fractional CFO services, financial diagnostics, and decision systems for owner-led businesses doing $1M to $30M. Kansas City based, led by a CFA with 12 years in institutional equity research."
+  description="Better decisions start with better numbers. Fractional CFO services, financial diagnostics, and decision systems for owner-led businesses doing $1M to $30M. Led by a CFA with 12 years in institutional equity research."
 >
   <!-- ═══ HERO ═══ -->
   <section class="hero">
     <div class="container">
-      <p class="eyebrow">Fractional CFO · Kansas City</p>
+      <p class="eyebrow">Fractional CFO for Owner-Led Businesses</p>
       <h1>
         The quality of your decisions is capped by the quality of your numbers.
       </h1>
@@ -31,7 +31,7 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
         <li>CFA Charterholder</li>
         <li>12 years institutional equity research</li>
         <li>Master's in Accountancy</li>
-        <li>Kansas City, working nationwide</li>
+        <li>Working with owners nationwide</li>
       </ul>
     </div>
   </section>
@@ -41,7 +41,7 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
     <div class="container">
       <div class="reveal">
         <p class="eyebrow">Sound familiar?</p>
-        <h2>Where good decisions go to die.</h2>
+        <h2>Why good decisions are harder than they should be.</h2>
         <p class="lede" style="margin-top:18px; max-width:580px;">
           Every business I work with is run by a capable owner making hard
           calls with soft information. The patterns repeat:
@@ -144,8 +144,6 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
               'Acquisition and deal analysis',
               'A thinking partner for the big calls',
             ],
-            href: CALENDLY,
-            linkLabel: 'Talk it through →',
           },
           {
             title: 'Financial Visibility',
@@ -158,8 +156,6 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
               'KPI frameworks that fit your business',
               'Monthly reporting in plain English',
             ],
-            href: CALENDLY,
-            linkLabel: 'Talk it through →',
           },
           {
             title: 'Cash Flow & Forecasting',
@@ -172,8 +168,6 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
               'Debt and banking relationship support',
               'Integrated financial models',
             ],
-            href: CALENDLY,
-            linkLabel: 'Talk it through →',
           },
         ].map((svc) => (
           <div class="card reveal svc">
@@ -182,7 +176,6 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
             <ul class="svc__list">
               {svc.items.map((item) => <li>{item}</li>)}
             </ul>
-            <a href={svc.href} class="svc__link">{svc.linkLabel}</a>
           </div>
         ))}
       </div>
@@ -204,7 +197,7 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
         <a href="/construction/" class="who who--featured reveal">
           <div class="who__label">Contractors & Trades</div>
           <p class="who__d">
-            Job costing, WIP schedules, bonding capacity. My deepest specialty
+            Job costing, WIP schedules, and cash flow between draws. My deepest specialty
             has its own page.
           </p>
           <span class="who__link">Built for builders →</span>
@@ -229,7 +222,7 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
       <div class="about__photo reveal">
         <img src="/headshot.jpg" alt="JT Adlard, founder of Atomic CFO" width="280" height="280" loading="lazy" />
         <div class="about__name">JT Adlard, CFA</div>
-        <div class="about__role">Founder, Atomic CFO</div>
+        <div class="about__role">Founder, Atomic CFO · Kansas City</div>
         <div class="about__links">
           <a href="https://www.linkedin.com/in/jtadlard/" rel="noopener">LinkedIn</a>
           <a href="mailto:jt@atomiccfo.com">Email</a>
@@ -259,11 +252,6 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
           <p class="about__pull">
             Big transformations start with atomic-level changes in the right places.
           </p>
-        </div>
-        <div class="about__tags">
-          {['CFA Charterholder', 'Master\u2019s in Accountancy', 'Equity Research', 'Capital Allocation', 'Job Costing', 'Financial Modeling', 'Construction Finance'].map((tag) => (
-            <span>{tag}</span>
-          ))}
         </div>
       </div>
     </div>
@@ -387,14 +375,6 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
     background: var(--gold);
     opacity: 0.6;
   }
-  .svc__link {
-    margin-top: 22px;
-    font-size: var(--text-small);
-    font-weight: 700;
-    color: var(--navy);
-    text-decoration: none;
-  }
-  .svc__link:hover { color: var(--gold-dark); }
 
   /* Who */
   .gold-text { color: var(--gold-dark); }
@@ -481,16 +461,6 @@ const CALENDLY = 'https://calendly.com/jt-adlard/30min';
     font-size: 1.1875rem;
     border-left: 3px solid var(--gold);
     padding-left: 18px;
-  }
-  .about__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
-  .about__tags span {
-    padding: 5px 13px;
-    border-radius: 100px;
-    font-size: var(--text-caption);
-    font-weight: 600;
-    background: #fff;
-    border: 1px solid var(--warm-gray-light);
-    color: var(--slate);
   }
 
   @media (max-width: 920px) {
