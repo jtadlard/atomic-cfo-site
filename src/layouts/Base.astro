@@ -47,8 +47,14 @@ const baseSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    <link rel="icon" type="image/png" href="/favicon.png" sizes="any" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Icons. No sizes="any" here: that claims the icon is scalable,
+         which is only true of SVG, and Chrome will reject a raster file. -->
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
     <link rel="sitemap" href="/sitemap-index.xml" />
 
     <!-- Open Graph -->
